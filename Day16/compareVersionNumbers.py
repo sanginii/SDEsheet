@@ -1,6 +1,14 @@
-#Find the Index of the First Occurrence in a String
-def strStr(self, haystack: str, needle: str) -> int:
-    for i in range(len(haystack) - len(needle) + 1):
-        if haystack[i:i+len(needle)] == needle:
-            return i
-    return -1
+class Solution:
+    def compareVersion(self, version1: str, version2: str) -> int:
+        v1 = list(map(int, version1.split(".")))
+        v2 = list(map(int, version2.split(".")))
+        
+        max_len = max(len(v1), len(v2))
+        for i in range(max_len):
+            num1 = v1[i] if i < len(v1) else 0
+            num2 = v2[i] if i < len(v2) else 0
+            if num1 > num2:
+                return 1
+            elif num1 < num2:
+                return -1
+        return 0
