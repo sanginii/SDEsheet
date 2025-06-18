@@ -9,4 +9,4 @@ for i in range(n - 1, -1, -1):
 print("The minimum number of coins is", len(ans))
 print("The coins are")
 for i in range(len(ans)):
-    print(ans[i], end=" ")
+    print(ans[i], end=" ") 
