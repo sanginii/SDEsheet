@@ -2,7 +2,7 @@
 import heapq
 
 class Solution:
-    def topKFrequent(self, nums: List[int], k: int) -> List[int]:
+    def topKFrequent(self, nums, k):
         # Step 1: Build frequency map manually
         freq_map = {}
         for num in nums:
